@@ -1,0 +1,87 @@
+/* registerStyles.css */
+
+.register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url("/public/background.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.register-form {
+    width: 300px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.register-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.register-form input {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+.register-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #ff6b6b;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.register-form button:hover {
+    background-color: #ff5252;
+}
+
+
+.register-form .error-message {
+    color: red;
+    margin-bottom: 10px;
+}
+
+/* Анимация для формы регистрации */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Анимация при наведении на кнопку */
+@keyframes pulseButton {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.05);
+    }
+}
+
+/* Применяем анимации */
+.register-form {
+    animation: fadeInUp 0.5s ease;
+}
+
+.register-form button {
+    animation: pulseButton 0.3s infinite alternate;
+}
